@@ -181,7 +181,7 @@
 
     /* CONTACT */
     .contact { padding:8rem 4rem; background:var(--sand); display:flex; gap:6rem; align-items:center; transition:background 0.4s; }
-    body.dark .contact { background:#161710; }
+    body.dark .contact { background:#2a2b20; }
     .contact-left { flex:1; }
     .contact-title { font-family:'Cormorant Garamond',serif; font-size:clamp(2.5rem,5vw,4rem); font-weight:300; line-height:1.1; margin-bottom:2rem; }
     .contact-title em { font-style:italic; color:var(--gold); }
@@ -419,7 +419,7 @@
       <h2 class="contact-title">Troviamo il<br>profilo <em>giusto</em></h2>
       <p class="about-text" style="margin-top:1rem;">Sei una società in cerca di rinforzi o un agente che vuole valutare nuovi profili? Contattami: ti fornirò report dettagliati e analisi personalizzate.</p>
       <div class="contact-info">
-        <div class="contact-item"><strong>Email</strong>hello@gabrielgiven.com</div>
+        <div class="contact-item"><strong>Email</strong><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="39515c555556795e585b4b505c555e504f5c57175a5654">[email&#160;protected]</a></div>
         <div class="contact-item"><strong>Telefono</strong>+39 000 000 0000</div>
         <div class="contact-item"><strong>Sede</strong>Milano, Italia</div>
       </div>
@@ -466,7 +466,7 @@
   </div>
 
   <!--Start of Tawk.to Script-->
-  <script type="text/javascript">
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script type="text/javascript">
   var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
   (function(){
   var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
@@ -480,10 +480,10 @@
   <!--End of Tawk.to Script-->
 
   <script>
-    // LOADER
-    const loaderEl = document.getElementById('loader');
-    function hideLoader() { loaderEl.classList.add('hidden'); }
-    setTimeout(hideLoader, 2800);
+    // LOADER — sparisce dopo 2.5s, nessun evento esterno
+    setTimeout(function() {
+      document.getElementById('loader').classList.add('hidden');
+    }, 2500);
 
     // CURSOR
     const cursor = document.getElementById('cursor');
@@ -575,9 +575,4 @@
       setTimeout(() => { banner.style.opacity='1'; banner.style.transform='translateX(-50%) translateY(0)'; }, 1500);
       function close() { banner.style.opacity='0'; banner.style.transform='translateX(-50%) translateY(140px)'; }
       document.getElementById('cookieAccept').addEventListener('click', () => { localStorage.setItem('cookie_consent','all'); close(); });
-      document.getElementById('cookieEssential').addEventListener('click', () => { localStorage.setItem('cookie_consent','essential'); close(); });
-      document.getElementById('cookieDecline').addEventListener('click', () => { localStorage.setItem('cookie_consent','none'); close(); });
-    })();
-  </script>
-</body>
-</html>
+      document.getElementById('cookieEssential').addEventListener('click', () => { localStorag
